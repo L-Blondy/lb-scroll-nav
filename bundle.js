@@ -1,30 +1,39 @@
-export default function setScrollNav(sections, sectionsContainer = document.querySelector("body"), threshold = 0.5) {
-  document.addEventListener("click", e => {
-    const href = e.target.getAttribute("href");
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = setScrollNav;
+
+function setScrollNav(sections) {
+  var sectionsContainer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document.querySelector("body");
+  var threshold = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0.5;
+  document.addEventListener("click", function (e) {
+    var href = e.target.getAttribute("href");
 
     if (href && e.target.getAttribute("href")[0] === "#") {
       window.location.replace(href);
     }
   });
-  const options = {
-    threshold
+  var options = {
+    threshold: threshold
   };
 
   function callback(entries) {
-    entries.forEach(entry => {
+    entries.forEach(function (entry) {
       if (entry.intersectionRatio >= options.threshold) {
-        const id = entry.target.id;
-        const prevActive = document.querySelector(".navlink-active");
-        const newActive = document.querySelector(`[href="#${id}"]`);
+        var id = entry.target.id;
+        var prevActive = document.querySelector(".navlink-active");
+        var newActive = document.querySelector("[href=\"#".concat(id, "\"]"));
         prevActive && prevActive.classList.remove("navlink-active");
         newActive.classList.add("navlink-active");
-        history.replaceState({}, id, `/#${id}`);
+        history.replaceState({}, id, "/#".concat(id));
       }
     });
   }
 
-  const observer = new IntersectionObserver(callback, options);
-  sections.forEach(section => {
+  var observer = new IntersectionObserver(callback, options);
+  sections.forEach(function (section) {
     observer.observe(section);
   });
   sectionsContainer.style.overflowY = "scroll";
