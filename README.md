@@ -1,4 +1,4 @@
-# Sroll Nav setup
+# Scroll Nav setup
 
 ## Install 
 >npm install --save-dev lb-scroll-nav
@@ -23,5 +23,5 @@ import setScrollNav from "lb-scroll-nav"
 setScrollNav(sections, sectionsContainer, threshold)
 ```
 
-sectionsContainer defaults to BODY <br/>
-threshold defaults to 0.5 => location will update when 50% of the section at least is displayed
+SectionsContainer defaults to BODY <br/>
+Threshold defaults to 0.5 => location will update when 50% of the section at least is displayed
