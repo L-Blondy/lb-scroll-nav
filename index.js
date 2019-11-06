@@ -31,6 +31,7 @@ export default function setScrollNav ( sections, sectionsContainer = document.qu
 		observer.observe( section )
 	} )
 
-	sectionsContainer.style.overflow = "scroll";
+	sectionsContainer.style.overflowY = "scroll";
+	sectionsContainer.style.overflowX = "hidden";
 	sectionsContainer.style.scrollBehavior = "smooth";
 }
