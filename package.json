@@ -1,0 +1,26 @@
+{
+  "name": "lb-scroll-nav",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx babel index.js --out-file bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.0"
+  },
+  "dependencies": {},
+  "files": [
+    "bundle.js"
+  ],
+  "homepage": "https://github.com/L-Blondy/lb-lazy-images",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/L-Blondy/lb-lazy-images.git"
+  }
+}
