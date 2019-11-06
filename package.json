@@ -1,6 +1,6 @@
 {
   "name": "lb-scroll-nav",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "bundle.js",
   "scripts": {
@@ -18,9 +18,9 @@
   "files": [
     "bundle.js"
   ],
-  "homepage": "https://github.com/L-Blondy/lb-lazy-images",
+  "homepage": "https://github.com/L-Blondy/lb-scroll-nav.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/L-Blondy/lb-lazy-images.git"
+    "url": "https://github.com/L-Blondy/lb-scroll-nav.git"
   }
 }
