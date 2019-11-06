@@ -22,5 +22,6 @@ import setScrollNav from "lb-scroll-nav"
 ...
 setScrollNav(sections, sectionsContainer, threshold)
 ```
+
 sectionsContainer defaults to BODY
 threshold defaults to 0.5 => location will update when 50% of the section at least is displayed
