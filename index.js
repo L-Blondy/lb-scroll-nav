@@ -25,13 +25,21 @@ export default function setScrollNav ( sections, sectionsContainer = document.qu
 		} )
 	}
 
-	const observer = new IntersectionObserver( callback, options )
+	try {
+		const observer = new IntersectionObserver( callback, options )
 
-	sections.forEach( section => {
-		observer.observe( section )
-	} )
-
+		sections.forEach( section => {
+			observer.observe( section )
+		} )
+	}
+	catch ( error ) {
+		console.log( "No intersection observer on this browser" )
+	}
 	sectionsContainer.style.overflowY = "scroll";
 	sectionsContainer.style.overflowX = "hidden";
 	sectionsContainer.style.scrollBehavior = "smooth";
+	const body = document.querySelector( "body" );
+	body.style.height = "100vh";
+	body.style.width = "100%";
+	body.style.overflow = "hidden";
 }

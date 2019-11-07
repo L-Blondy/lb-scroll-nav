@@ -32,11 +32,20 @@ function setScrollNav(sections) {
     });
   }
 
-  var observer = new IntersectionObserver(callback, options);
-  sections.forEach(function (section) {
-    observer.observe(section);
-  });
+  try {
+    var observer = new IntersectionObserver(callback, options);
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
+  } catch (error) {
+    console.log("No intersection observer on this browser");
+  }
+
   sectionsContainer.style.overflowY = "scroll";
   sectionsContainer.style.overflowX = "hidden";
   sectionsContainer.style.scrollBehavior = "smooth";
+  var body = document.querySelector("body");
+  body.style.height = "100vh";
+  body.style.width = "100%";
+  body.style.overflow = "hidden";
 }
