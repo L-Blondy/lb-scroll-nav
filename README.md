@@ -11,17 +11,28 @@
 ## Usage
 index.html
 ```
-<a href="#targetID">
+<nav ...>
+	<a href="#targetID_1" class="navbar-active">
+	<a href="#targetID_2">
+	<a href="#targetID_3">
+	<a href="#targetID_4">
+</nav>
 ...
-<section id="targetID">
+<div class="sectionsContainer" >
+	<section id="targetID_1">
+	<section id="targetID_2">
+	<section id="targetID_3">
+	<section id="targetID_4">
+</div>
+
 ```
 
 myfile.js
 ```
 import setScrollNav from "lb-scroll-nav"
 ...
-setScrollNav(sections, sectionsContainer, threshold)
+setScrollNav(sections, sectionContainer, threshold)
 ```
 
-SectionsContainer defaults to BODY <br/>
-Threshold defaults to 0.5 => location will update when 50% of the section at least is displayed
+`SectionContainer` defaults to BODY <br/>
+`Threshold` defaults to 0.5 => location will update when 50% of the section at least is displayed
