@@ -33,7 +33,7 @@ export default function setScrollNav ( sections, sectionsContainer = document.qu
 		} )
 	}
 	catch ( error ) {
-		throw new Error( "The IntersectionObserver API might not be supported by the browser" )
+		console.log( "The IntersectionObserver API might not be supported by the browser" )
 	}
 	sectionsContainer.style.overflowY = "scroll";
 	sectionsContainer.style.overflowX = "hidden";
