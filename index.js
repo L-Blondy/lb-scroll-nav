@@ -33,7 +33,7 @@ export default function setScrollNav ( sections, sectionsContainer = document.qu
 		} )
 	}
 	catch ( error ) {
-		console.log( "No intersection observer on this browser" )
+		console.log( "The IntersectionObserver API might not be supported by the browser" )
 	}
 	sectionsContainer.style.overflowY = "scroll";
 	sectionsContainer.style.overflowX = "hidden";
@@ -42,4 +42,5 @@ export default function setScrollNav ( sections, sectionsContainer = document.qu
 	body.style.height = "100vh";
 	body.style.width = "100%";
 	body.style.overflow = "hidden";
+	document.querySelector( "nav" ).style.width = "100%";
 }
