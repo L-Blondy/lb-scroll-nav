@@ -36,3 +36,21 @@ setScrollNav(sections, sectionContainer, threshold)
 
 `SectionContainer` defaults to BODY <br/>
 `Threshold` defaults to 0.5 => location will update when 50% of the section at least is displayed
+
+## Default styling
+
+Done with inline JS:
+```
+sectionsContainer {
+	overflow-y: "hidden";
+	overflow-x: "scroll";
+	scrollBehavior: smooth;
+}
+body {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+nav {
+	width: 100%; //for IE
+}

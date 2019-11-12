@@ -1,5 +1,6 @@
+{
 	"name": "lb-scroll-nav",
-	"version": "1.0.10",
+	"version": "1.0.12",
 	"description": "Setup scrolling navigation",
 	"main": "bundle.js",
 	"scripts": {
@@ -24,3 +25,4 @@
 		"type": "git",
 		"url": "https://github.com/L-Blondy/lb-scroll-nav.git"
 	}
+}
