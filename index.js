@@ -15,11 +15,11 @@ export default function setScrollNav ( sections, sectionsContainer = document.qu
 		entries.forEach( entry => {
 			if ( entry.intersectionRatio >= options.threshold ) {
 				const id = entry.target.id
-				const prevActive = document.querySelector( ".navlink-active" )
+				const prevActive = document.querySelector( ".active" )
 				const newActive = document.querySelector( `[href="#${ id }"]` )
 
-				prevActive && prevActive.classList.remove( "navlink-active" )
-				newActive.classList.add( "navlink-active" )
+				prevActive && prevActive.classList.remove( "active" )
+				newActive.classList.add( "active" )
 				history.replaceState( {}, id, `/#${ id }` )
 			}
 		} )
