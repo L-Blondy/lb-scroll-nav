@@ -1,0 +1,17 @@
+body {
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+     max-height: 100vh;
+     overflow: hidden;
+}
+
+.navbar {
+     flex-shrink: 0;
+}
+
+.section-container {
+     overflow-x: hidden;
+     overflow-y: scroll;
+     scroll-behavior: smooth;
+}
