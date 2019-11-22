@@ -1,11 +1,11 @@
 {
 	"name": "lb-scroll-nav",
-	"version": "1.0.18",
+	"version": "1.1.4",
 	"description": "Setup scrolling navigation",
-	"main": "bundle.js",
+	"main": "dist/bundle.js",
 	"scripts": {
 		"start": "parcel test/index.html",
-		"build": "npx babel index.js --out-file bundle.js && uglifyjs bundle.js -o bundle.js -c -m && parcel build index.css",
+		"build": "rm -rf dist && npx babel index.js --out-file dist/bundle.js --source-maps && uglifyjs dist/bundle.js -o dist/bundle.js -c -m && parcel build index.css",
 		"deploy": "npm run build && npm publish",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -20,7 +20,7 @@
 	},
 	"dependencies": {},
 	"files": [
-		"bundle.js"
+		"dist/*"
 	],
 	"homepage": "https://github.com/L-Blondy/lb-scroll-nav.git",
 	"repository": {

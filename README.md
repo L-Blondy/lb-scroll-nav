@@ -9,10 +9,10 @@
 - removes # history spam
 
 ## Usage
-index.html
+*index.html*
 ```
 <nav ...>
-	<a href="#targetID_1" class="navbar-active">
+	<a href="#targetID_1">
 	<a href="#targetID_2">
 	<a href="#targetID_3">
 	<a href="#targetID_4">
@@ -26,8 +26,9 @@ index.html
 </div>
 
 ```
+**Note** : active class = "navbar-active"
 
-myfile.js
+*myfile.js*
 ```
 import setScrollNav from "lb-scroll-nav"
 ...
@@ -38,9 +39,8 @@ Defaults to 0.5 for each section.
 
 ## Default styling
 
-Done with inline JS:
 ```
-sectionsContainer {
+sections-container {
 	overflow-y: "hidden";
 	overflow-x: "scroll";
 	scrollBehavior: smooth;

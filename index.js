@@ -19,7 +19,7 @@ export default function setScrollNav ( sections, sectionContainer ) {
 	function callback ( entries ) {
 		entries.forEach( entry => {
 			const activeLinks = document.querySelectorAll( ".active" );
-			[].forEach.call( activeLinks, link => link.classList.remove( "active" ) )
+			activeLinks && [].forEach.call( activeLinks, link => link.classList.remove( "active" ) )
 			refs[ entry.target.id ] = entry.intersectionRatio;
 			let maxRatio = 0;
 
@@ -28,14 +28,16 @@ export default function setScrollNav ( sections, sectionContainer ) {
 					maxRatio = refs[ ref ]
 					maxElemRef = ref
 				}
-				if ( refs[ ref ] > 0.5 ) {
+				if ( refs[ ref ] === 1 ) {
+					const activeLink = document.querySelector( ".active" )
+					activeLink && activeLink.classList.remove( "active" )
 					const link = document.querySelector( `[href="#${ ref }"]` )
 					if ( !link.classList.contains( "active" ) ) {
 						link.classList.add( "active" )
 					}
 				}
 			}
-			if ( maxRatio <= 0.5 ) {
+			if ( maxRatio < 1 ) {
 				const link = document.querySelector( `[href="#${ maxElemRef }"]` )
 				if ( !link.classList.contains( "active" ) ) {
 					link.classList.add( "active" )
@@ -46,7 +48,8 @@ export default function setScrollNav ( sections, sectionContainer ) {
 	try {
 		const options = {
 			root: sectionContainer,
-			threshold: [ 0, 0.1, 0.2, 0.3, 0.4, 0.5 ]
+			rootMargin: "0px 0px 1px 0px",
+			threshold: [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ]
 		}
 
 		const observer = new IntersectionObserver( callback, options );
