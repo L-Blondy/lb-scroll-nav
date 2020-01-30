@@ -6,10 +6,10 @@ export default function setScrollNav ( sections, sectionContainer ) {
 
 	document.addEventListener( "click", e => {
 		const href = e.target.getAttribute( "href" )
-		const target = document.querySelector( href )
 
 		if ( href && e.target.getAttribute( "href" )[ 0 ] === "#" ) {
 			e.preventDefault()
+			const target = document.querySelector( href )
 			target.scrollIntoView(
 				{ behavior: "smooth" }
 			)
