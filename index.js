@@ -48,7 +48,7 @@ export default function setScrollNav ( sections, sectionContainer ) {
 	try {
 		const options = {
 			root: sectionContainer,
-			rootMargin: "0px 0px 1px 0px",
+			rootMargin: "-50px 0px -50px 0px",
 			threshold: [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ]
 		}
 
