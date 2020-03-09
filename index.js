@@ -39,7 +39,7 @@ export default function setScrollNav ( sections, sectionContainer ) {
 			}
 			if ( maxRatio < 1 ) {
 				const link = document.querySelector( `[href="#${ maxElemRef }"]` )
-				if ( !link.classList.contains( "active" ) ) {
+				if ( link && !link.classList.contains( "active" ) ) {
 					link.classList.add( "active" )
 				}
 			}
